@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ytmedialibrary.MainAppFXMLController">
+   <children>
+      <TabPane prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="tabYT" closable="false" text="YouTube">
+               <content>
+                  <AnchorPane fx:id="apYoutube" prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="lblYTLink" layoutX="14.0" layoutY="14.0" text="Link:" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0" />
+                        <TextField fx:id="txtYTLink" layoutX="46.0" layoutY="10.0" prefHeight="25.0" prefWidth="478.0" text="https://www.youtube.com/watch?v=qp46Dh-Muew&amp;list=PLbgOpekvZPSC0SUVKqiM_zfwYlEjmpKIo&amp;index=1" AnchorPane.leftAnchor="45.0" AnchorPane.rightAnchor="85.0" AnchorPane.topAnchor="10.0" />
+                        <Button fx:id="btnYTDownload" layoutX="507.0" layoutY="10.0" mnemonicParsing="false" onAction="#GenerateListAction" text="Generate" AnchorPane.rightAnchor="10.0" />
+                        <Label fx:id="lblYTValidation" layoutX="45.0" layoutY="35.0" text="A valid link to a Youtube video, including playlists, is required." textFill="#656565" />
+                        <ListView fx:id="lvVideo" layoutY="52.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                        <Label layoutX="266.0" layoutY="144.0" text="Label" />
+                     </children></AnchorPane>
+               </content>
+          </Tab>
+          <Tab fx:id="tabLib" text="Library">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </Tab>
+            <Tab fx:id="tabSettings" text="Settings">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Accordion prefHeight="372.0" prefWidth="600.0" AnchorPane.bottomAnchor="45.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <panes>
+                            <TitledPane animated="false" text="untitled 1">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                              </content>
+                            </TitledPane>
+                            <TitledPane animated="false" text="untitled 2">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                              </content>
+                            </TitledPane>
+                            <TitledPane animated="false" text="untitled 3">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                              </content>
+                            </TitledPane>
+                          </panes>
+                        </Accordion>
+                        <HBox layoutX="14.0" layoutY="264.0" prefHeight="45.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <children>
+                              <Button mnemonicParsing="false" text="Expand">
+                                 <HBox.margin>
+                                    <Insets left="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" text="Collapse">
+                                 <HBox.margin>
+                                    <Insets left="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="tabAbout" text="About">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
