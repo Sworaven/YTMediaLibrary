@@ -19,8 +19,8 @@ public class YTMediaLibrary extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
-        
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("MainAppFXML.fxml"));
+        Parent root = (Parent)loader.load();
         Scene scene = new Scene(root);
         
         stage.setScene(scene);
@@ -34,4 +34,7 @@ public class YTMediaLibrary extends Application {
         launch(args);
     }
     
+    public Stage getStage(){
+        return this.getStage();
+    }
 }

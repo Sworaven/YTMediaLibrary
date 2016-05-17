@@ -7,7 +7,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ytmedialibrary.MainAppFXMLController">
+<AnchorPane id="AnchorPane" fx:id="apRoot" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ytmedialibrary.MainAppFXMLController">
    <children>
       <TabPane prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
         <tabs>
@@ -16,11 +16,14 @@
                   <AnchorPane fx:id="apYoutube" prefHeight="200.0" prefWidth="200.0">
                      <children>
                         <Label fx:id="lblYTLink" layoutX="14.0" layoutY="14.0" text="Link:" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0" />
-                        <TextField fx:id="txtYTLink" layoutX="46.0" layoutY="10.0" prefHeight="25.0" prefWidth="478.0" text="https://www.youtube.com/watch?v=qp46Dh-Muew&amp;list=PLbgOpekvZPSC0SUVKqiM_zfwYlEjmpKIo&amp;index=1" AnchorPane.leftAnchor="45.0" AnchorPane.rightAnchor="85.0" AnchorPane.topAnchor="10.0" />
+                        <TextField fx:id="txtYTLink" layoutX="46.0" layoutY="10.0" prefHeight="25.0" prefWidth="478.0" text="https://www.youtube.com/watch?v=PmytgdiMYoQ&amp;list=PLbgOpekvZPSAOwF0Vd4l5JDGN0ML8GKY-&amp;index=1" AnchorPane.leftAnchor="45.0" AnchorPane.rightAnchor="85.0" AnchorPane.topAnchor="10.0" />
                         <Button fx:id="btnYTDownload" layoutX="507.0" layoutY="10.0" mnemonicParsing="false" onAction="#GenerateListAction" text="Generate" AnchorPane.rightAnchor="10.0" />
                         <Label fx:id="lblYTValidation" layoutX="45.0" layoutY="35.0" text="A valid link to a Youtube video, including playlists, is required." textFill="#656565" />
                         <ListView fx:id="lvVideo" layoutY="52.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
                         <Label layoutX="266.0" layoutY="144.0" text="Label" />
+                        <TextArea fx:id="rtfConsole" editable="false" layoutX="14.0" layoutY="256.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="109.0" prefWidth="250.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" />
+                        <Button fx:id="btnDirectoryChooser" layoutX="532.0" layoutY="257.0" mnemonicParsing="false" onAction="#DirectoryChooserAction" text="Choose folder" AnchorPane.bottomAnchor="89.0" AnchorPane.rightAnchor="5.0" />
+                        <ComboBox fx:id="cbxPaths" layoutX="266.0" layoutY="257.0" prefHeight="25.0" prefWidth="240.0" AnchorPane.rightAnchor="101.0" />
                      </children></AnchorPane>
                </content>
           </Tab>
